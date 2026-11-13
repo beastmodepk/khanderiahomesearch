@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khanderia Home Search — a house-hunting blog</title>
+<title>Khanderia Home Search — rentals vs buying, investigated properly</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,26 +11,96 @@
 
 <header class="site">
   <div class="name"><a href="index.html">Khanderia Home Search</a></div>
-  <div class="tag">We tour the houses. We run the numbers. Most of them get rejected — here's why.</div>
-  <nav><a href="index.html">Posts</a> <a href="#about">About</a></nav>
+  <div class="tag">Rentals vs buying, one property at a time — investigated properly, answered honestly, stamped with a verdict.</div>
+  <nav><a href="index.html">Listings</a> <a href="blog/index.html">Blog</a> <a href="questions.html">The Questions</a> <a href="#about">About</a></nav>
 </header>
 
+<div class="stats">
+  <div><div class="v">1</div><div class="k">Investigated</div></div>
+  <div><div class="v">1</div><div class="k">Town</div></div>
+  <div><div class="v">1</div><div class="k">Rejected</div></div>
+  <div><div class="v">0</div><div class="k">Bought / Signed</div></div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" id="tab-btn-buying" onclick="showTab('buying')">🏠 Buying</button>
+  <button class="tab-btn" id="tab-btn-rentals" onclick="showTab('rentals')">🔑 Rentals</button>
+</div>
+
+<div class="tab-panel" id="panel-buying">
+  <div class="chips" data-panel="buying">
+    <button class="chip active" data-town="all">All towns</button>
+    <button class="chip" data-town="chelmsford">Chelmsford</button>
+    <!-- New towns get a chip here as listings arrive. -->
+  </div>
+  <div class="listing-grid">
+    <div class="listing-card" data-town="chelmsford">
+      <div class="listing-photo">📷 Photo slot — MLS photo to be added<br>(one photo per listing, saved into <code>images/</code>)</div>
+      <div class="listing-body">
+        <span class="status rejected">Rejected — value maths</span>
+        <div class="listing-price">$699,900</div>
+        <div class="listing-addr">3 Balsam Dr, Chelmsford, MA</div>
+        <div class="listing-specs">4 bd · 2 ba · 1,766 sq ft · 0.41 ac · 1959 ranch · MLS #73599405</div>
+        <p class="listing-note">Could we add a second floor? Zoning said probably yes; the comps said the finished house would be worth ~$230k–$280k less than it cost to build. Run both ways in the full investigation.</p>
+        <a class="btn" href="posts/3-balsam-dr-chelmsford.html">Read the investigation</a>
+        <a class="btn" style="background:#5d5342" href="https://www.redfin.com/MA/Chelmsford/3-Balsam-Dr-01824/home/11568456" target="_blank" rel="noopener">Original listing</a>
+      </div>
+    </div>
+  </div>
+  <p class="src" style="margin-top:12px">Buying a place gets the full treatment: feasibility, renovation costs, sold comps, and the plan run twice — with the big idea and without it.</p>
+</div>
+
+<div class="tab-panel" id="panel-rentals" style="display:none">
+  <div class="chips" data-panel="rentals">
+    <button class="chip active" data-town="all">All towns</button>
+    <!-- Rental towns get chips here as listings arrive. -->
+  </div>
+  <div class="empty">No rentals under investigation yet.<br>The first rental Parthey sends in the Muse chat gets card #1 here — with its rent, the photos, and his answers to <a href="questions.html">the Questions</a>.</div>
+  <p class="src" style="margin-top:12px">Rentals get the same honesty, faster: monthly rent, what's included, lease terms, the commute, and Parthey's verdict — signed or rejected, and why.</p>
+</div>
+
 <div class="post-card">
-  <div class="meta">HOUSE #1 · CHELMSFORD, MA · NOV 13, 2026</div>
-  <h2><a href="posts/3-balsam-dr-chelmsford.html">The Ranch That Wanted to Be a Colonial</a></h2>
-  <p>3 Balsam Dr asked $699,900 for a 1959 one-storey ranch — so we asked the obvious question: what if we just… added a whole second floor? The town of Chelmsford was surprisingly fine with it. The spreadsheet was not. A story of zoning loopholes, a 1959 foundation, and the $1.23M comp that wasn't.</p>
-  <span class="stamp">Rejected</span><br>
-  <a class="btn" href="posts/3-balsam-dr-chelmsford.html">Read why it was rejected</a>
+  <div class="meta">BLOG POST #1 · NOV 13, 2026</div>
+  <h2><a href="blog/why-this-page-exists.html">Why This Page Exists</a></h2>
+  <p>It started with a ranch in Chelmsford, a second floor that existed only in our heads, and a spreadsheet that refused to be charmed. The origin story of this blog — and the rules every house after it will be judged by.</p>
+  <a class="btn" href="blog/why-this-page-exists.html">Read the first post</a>
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0">The Khanderia Questions</h2>
+  <p>Before any verdict, every property gets the same eight answers from Parthey, given in the Muse chat and recorded on its page. No answers, no stamp.</p>
+  <p><a href="questions.html">See the eight questions →</a></p>
 </div>
 
 <div class="card" id="about">
   <h2 style="margin-top:0">About this blog</h2>
-  <p>Every house we seriously consider gets a post: what it is, what we'd do to it, what that would cost, what it would actually be worth afterwards — and the verdict. No vibes-based purchasing. If the maths doesn't work, the house gets the stamp, and the stamp is not kind.</p>
-  <p>Posts are written from public listing data, town bylaws, contractor pricing and actual sold comps, checked on the date shown. Estimates are planning numbers, not quotes or appraisals.</p>
+  <p>Every property we seriously consider gets a page: the listing price and photos, what we'd do to it, what that would cost, what it would actually be worth — and the verdict. No vibes-based purchasing. If the maths doesn't work, the property gets the stamp, and the stamp is not kind.</p>
+  <p>Posts are written from public listing data, town bylaws, contractor pricing and actual sold comps, checked on the date shown. Estimates are planning numbers, not quotes or appraisals. Listing photos belong to their MLS/brokerage; we save and credit them per listing.</p>
 </div>
 
 <footer class="site">Khanderia Home Search · khanderiahomesearch.com · House data from MLS PIN / Redfin / Zillow public records</footer>
 
 </div>
+<script>
+function showTab(which) {
+  document.getElementById('panel-buying').style.display = which === 'buying' ? 'block' : 'none';
+  document.getElementById('panel-rentals').style.display = which === 'rentals' ? 'block' : 'none';
+  document.getElementById('tab-btn-buying').classList.toggle('active', which === 'buying');
+  document.getElementById('tab-btn-rentals').classList.toggle('active', which === 'rentals');
+}
+document.querySelectorAll('.chips').forEach(function (group) {
+  group.querySelectorAll('.chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      group.querySelectorAll('.chip').forEach(function (c) { c.classList.remove('active'); });
+      chip.classList.add('active');
+      var panel = document.getElementById('panel-' + group.getAttribute('data-panel'));
+      var town = chip.getAttribute('data-town');
+      panel.querySelectorAll('.listing-card').forEach(function (card) {
+        card.style.display = (town === 'all' || card.getAttribute('data-town') === town) ? 'block' : 'none';
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>
