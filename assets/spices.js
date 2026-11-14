@@ -26,11 +26,15 @@ document.querySelectorAll("[data-filter-group]").forEach(function (group) {
    page. Back returns to the building's other listings; the box
    also carries a Home link. */
 document.querySelectorAll("[data-open-unit]").forEach(function (btn) {
-  btn.addEventListener("click", function () {
+  function openUnit() {
     var panel = document.getElementById(btn.getAttribute("data-open-unit"));
     if (!panel) return;
     panel.hidden = false;
     document.body.style.overflow = "hidden";
+  }
+  btn.addEventListener("click", openUnit);
+  btn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openUnit(); }
   });
 });
 document.querySelectorAll(".unitpanel").forEach(function (panel) {
