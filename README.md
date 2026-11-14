@@ -1,27 +1,57 @@
 # Donnell Khanderia Home Search
 
-A house-hunting journal for Parthey & Shannon: homes to **buy** on the left, places to **lease** on the right — every entry investigated properly, answered honestly, and stamped with a verdict.
+Shannon and Parthey's home-search journal — two sides, **Buy** and **Lease**;
+every property they look at appears with what they judged it on, and the
+verdict it got.
 
-Live: https://beastmodepk.github.io/khanderiahomesearch/
+**Live:** https://beastmodepk.github.io/khanderiahomesearch/
+Domain (not yet connected): khanderiahomesearch.com
 
-## How the site works
+## How the site is put together
 
-The public page is a single self-contained `index.html`: a Buy/Lease split screen whose seam is sized by the entry counts, real listing photos as separate framed prints, Liquid Glass throughout, and details that open in place — no separate collection pages. The blog, the Khanderia Questions and the About page live inside the same page.
+This repo IS the site — plain files, no build step. GitHub Pages serves it
+as-is on every push to `main`.
 
-**Source of truth:** the page is designed and edited as a Muse page ("Khanderia Home Search — Shutter Example"). `index.html` in this repo is its export. To update the site: change the Muse page → export → replace `index.html` → commit (small, one functionality per commit) → push. The GitHub Actions workflow deploys to Pages on every push to `main`.
+```
+index.html                        the Buy/Lease split screen (the front door)
+about.html                        the About page
+questions.html                    The Khanderia Questions
+blog/why-this-page-exists.html    Blog Post #1
+buy/index.html                    the Buy homepage (town filter + tiles)
+buy/3-balsam-dr.html              a Buy post — one file per house
+rent/index.html                   the Lease homepage (town filter + tiles)
+rent/towers-at-longfellow.html    a building page (one photo, unit boxes inside)
+rent/longfellow-4-3011.html       a unit post — one file per unit
+rent/315-on-a.html                a Lease post
+rent/halstead-burlington.html     the current-home building page
+rent/halstead-current-home.html   the Current Home post (monthly costs)
+assets/spices.css                 ALL styling, shared by every page
+assets/spices.js                  ALL behaviour, shared by every page
+images/                           the photos, as real files
+```
 
-## What's on it now
+## How to edit (for Shannon, or her Muse)
 
-- **Buy — 1 home:** 3 Balsam Dr, Chelmsford, MA ($699,900) — "The Ranch That Wanted to Be a Colonial." Could we add a second floor? Zoning said probably yes; the comps said no. **Rejected — value maths.**
-- **Lease — 2 buildings, 6 units inside, all In Review:** Towers at Longfellow, Boston (5 units toured Nov 7, 2026 — 4-3011 leads) and 315 on A #1405, Fort Point.
+- **Change words:** open the page's own `.html` file and edit the text
+  between the tags — what you see in the file is what's on the page.
+  Send the changed file (or a pull request) and it goes live on merge.
+- **Change a design thing everywhere:** edit `assets/spices.css` —
+  one file holds every "spice" (glass, stamps, tiles, colours).
+- **Add a property:** copy the closest existing post page, change its
+  text and photo, then add its tile to the side homepage
+  (`buy/index.html` or `rent/index.html`) and to the split screen
+  (`index.html`), and update the counts there.
+- **Tour posts all share one format:** the "Toured - <date>" heading,
+  then "Tour Notes:" with the recorded notes as bullets — verbatim,
+  never dressed up.
+- **Never invent a rent.** If a unit's rent wasn't noted on the tour,
+  its page says "Rent not noted".
 
-## Publishing workflow for a new property
+## House rules
 
-1. Parthey sends the listing in the Muse chat.
-2. Alfred investigates (feasibility, costs, comps) and drafts the entry.
-3. Parthey answers the eight Khanderia Questions in chat; the answers go on the entry.
-4. The entry posts as **In Review** until Parthey's verdict; then it gets its stamp and full write-up.
-
-## Custom domain (pending)
-
-`khanderiahomesearch.com` — available (checked Nov 13, 2026: Cloudflare Registrar $11.17/yr, Porkbun $11.81/yr), not yet registered. Once bought: add a `CNAME` file containing `khanderiahomesearch.com`, point the apex A records at GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153), and enforce HTTPS in Settings → Pages.
+- The split screen never stacks — Buy and Lease sit side by side on
+  every screen, sized by how many entries each side holds.
+- Multi-unit buildings get ONE picture on the homepages; the units
+  live inside the building's page as boxes.
+- Verdicts land as stamps (REJECTED / IN REVIEW / CURRENT HOME) only
+  when Parthey gives them.
