@@ -182,6 +182,8 @@ tr.hl td{ font-weight: 800; background: rgba(255,255,255,.5); }
 .costs{ list-style: none; padding: 0; margin: 10px 0; font-size: 18px; }
 .costs li{ padding: 9px 2px; border-bottom: 1px solid rgba(28,36,48,.14); }
 .costs li.total{ font-weight: 900; border-bottom: none; }
+.tile .costs{ font-size: 15.5px; margin: 8px 0 0; }
+.tile .costs li{ padding: 6px 2px; }
 .qlist li{ margin: 12px 0; font-size: 16.5px; line-height: 1.5; }
 .qlist .q{ font-weight: 800; }
 .qlist .why{ color: var(--ink-soft); }

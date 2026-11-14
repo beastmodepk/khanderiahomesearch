@@ -23,8 +23,9 @@ rent/index.html                   the Lease homepage (town filter + tiles)
 rent/towers-at-longfellow.html    a building page (one photo, unit boxes inside)
 rent/longfellow-4-3011.html       a unit post — one file per unit
 rent/315-on-a.html                a Lease post
-rent/halstead-burlington.html     the current-home building page
-rent/halstead-current-home.html   the Current Home post (monthly costs)
+rent/halstead-burlington.html     the current-home building page — its box
+                                   carries the Current Home details (monthly
+                                   costs) directly; there is no separate post
 assets/spices.css                 ALL styling, shared by every page
 assets/spices.js                  ALL behaviour, shared by every page
 images/                           the photos, as real files
