@@ -20,8 +20,9 @@ blog/why-this-page-exists.html    Blog Post #1
 buy/index.html                    the Buy homepage (town filter + tiles)
 buy/3-balsam-dr.html              a Buy post — one file per house
 rent/index.html                   the Lease homepage (town filter + tiles)
-rent/towers-at-longfellow.html    a building page (one photo, unit boxes inside)
-rent/longfellow-4-3011.html       a unit post — one file per unit
+rent/towers-at-longfellow.html    a building page (one photo, unit boxes
+                                   inside — each unit's post opens AS A BOX
+                                   on this page, with Back + Home in the box)
                                    (single-unit buildings have NO pages of
                                    their own — their details live in their box
                                    on rent/index.html: 315 on A, Halstead)

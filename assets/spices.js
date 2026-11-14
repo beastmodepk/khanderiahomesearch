@@ -22,6 +22,26 @@ document.querySelectorAll("[data-filter-group]").forEach(function (group) {
   });
 });
 
+/* Unit boxes — a unit's post opens as a box over the building
+   page. Back returns to the building's other listings; the box
+   also carries a Home link. */
+document.querySelectorAll("[data-open-unit]").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var panel = document.getElementById(btn.getAttribute("data-open-unit"));
+    if (!panel) return;
+    panel.hidden = false;
+    document.body.style.overflow = "hidden";
+  });
+});
+document.querySelectorAll(".unitpanel").forEach(function (panel) {
+  panel.addEventListener("click", function (e) {
+    if (e.target === panel || e.target.closest("[data-close-unit]")) {
+      panel.hidden = true;
+      document.body.style.overflow = "";
+    }
+  });
+});
+
 /* Photo auto-fit — when a tile's frame badly fights its photo's
    shape, show the whole photo over a blurred fill of itself
    instead of cropping most of it away. */

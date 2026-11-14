@@ -113,6 +113,22 @@ h1.page-title{ font-size: 34px; margin: 2px 0 4px; }
 .tile .cap .facts{ margin: 8px 0 0; padding: 0; list-style: none; font-size: 14.5px; }
 .tile .cap .facts li{ margin: 2.5px 0; }
 .tile .stamp{ font-size: 11px; padding: 4px 8px; margin-left: 8px; vertical-align: 2px; }
+button.tile{ font: inherit; text-align: left; cursor: pointer; width: 100%; }
+
+/* ---------- unit posts open as boxes (building pages) ---------- */
+.unitpanel{
+  position: fixed; inset: 0; z-index: 40;
+  background: rgba(10,16,28,.45);
+  display: flex; align-items: flex-start; justify-content: center;
+  overflow: auto; padding: 20px 12px;
+}
+.unitpanel[hidden]{ display: none; }
+.unitbox{ max-width: 680px; width: 100%; padding: 20px 24px 24px; }
+.unitnav{ display: flex; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.unitnav .navbtn{ font: inherit; cursor: pointer; }
+.unit-title{ font-size: 28px; margin: 2px 0 4px; }
+.tnlabel{ font-weight: 700; margin: 10px 0 2px; }
+
 .details-pill{
   display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 700;
   padding: 6px 12px; border-radius: 999px;
