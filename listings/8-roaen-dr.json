@@ -1,0 +1,27 @@
+{
+  "id": "8-roaen-dr",
+  "side": "buy",
+  "kind": "post",
+  "name": "8 Roaen Dr",
+  "town": "North Chelmsford",
+  "address": "8 Roaen Dr, North Chelmsford, MA 01863",
+  "priceLine": "$657,000",
+  "stamp": "REJECTED",
+  "photo": "images/8-roaen-dr.jpg",
+  "specs": [
+    "3 bd",
+    "2 ba",
+    "1,684 sq ft"
+  ],
+  "bodyType": "facts",
+  "facts": [
+    "3 bd",
+    "2 ba",
+    "1,684 sq ft",
+    "Raised ranch",
+    "Built 1979",
+    "1.04 acres",
+    "Cul-de-sac",
+    "MLS #73580972"
+  ]
+}
