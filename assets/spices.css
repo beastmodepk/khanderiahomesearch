@@ -130,7 +130,7 @@ h1.page-title{ font-size: 34px; margin: 2px 0 4px; }
 .chip[aria-pressed="true"]{ background: var(--ink); color: #fff; border-color: var(--ink); }
 
 /* ---------- the split (home page) ---------- */
-.gate-wrap{ min-height: 100vh; display: flex; flex-direction: column; }
+.gate-wrap{ min-height: calc(100vh - 92px); display: flex; flex-direction: column; }
 .split{ flex: 1; display: flex; gap: 14px; padding: 14px; }
 .door{
   position: relative; border-radius: 26px; overflow: hidden;
@@ -141,20 +141,13 @@ h1.page-title{ font-size: 34px; margin: 2px 0 4px; }
 .door.buy{ flex-grow: 1; animation-delay: .02s; }
 .door.lease{ flex-grow: 3; animation-delay: .10s; }
 @keyframes door-in{ from{ transform: translateY(14px); opacity: 0; } to{ transform: none; opacity: 1; } }
-.door .dlabel{ font-size: 15px; font-weight: 800; letter-spacing: .22em; }
-.door .dcount{
-  align-self: flex-start; margin-top: 8px; font-size: 13.5px; font-weight: 600;
-  background: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.7);
-  padding: 5px 11px; border-radius: 999px;
-}
+.door .dlabel{ font-size: 15px; font-weight: 800; letter-spacing: .22em; color: rgba(28,36,48,.72); }
+.door .tile{ background: rgba(255,255,255,.48); border-color: rgba(255,255,255,.5); }
+.door .tile .cap .s{ color: rgba(74,84,104,.85); }
+.tile[id]{ scroll-margin-top: 92px; }
 .door .tiles{ margin-top: auto; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); padding-top: 16px; }
 .door .tile .cap .t{ font-size: 15.5px; }
-.gate-pill{
-  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
-  z-index: 5; text-align: center; padding: 16px 22px 13px; max-width: 92vw;
-}
-.gate-pill .gname{ font-weight: 900; font-size: clamp(19px, 3.4vw, 30px); white-space: nowrap; letter-spacing: .2px; }
-.gate-pill nav{ margin-top: 9px; display: flex; gap: 8px; justify-content: center; }
+
 
 /* ---------- posts ---------- */
 .hero{ border-radius: 18px; overflow: hidden; margin-bottom: 18px; box-shadow: 0 10px 30px rgba(10,20,40,.25); }
@@ -195,8 +188,6 @@ footer.site a{ color: #fff; }
   .split{ gap: 9px; padding: 9px; }
   .door{ padding: 12px; border-radius: 20px; }
   .door .tiles{ grid-template-columns: 1fr; }
-  .gate-pill{ padding: 11px 14px 9px; }
-  .gate-pill .gname{ font-size: clamp(13px, 4.6vw, 17px); }
   .sheet{ padding: 20px 16px 24px; margin: 12px 10px 30px; }
   .topbar{ margin: 10px 10px 0; }
   h1.page-title{ font-size: 27px; }
