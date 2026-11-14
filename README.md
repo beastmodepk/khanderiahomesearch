@@ -22,10 +22,9 @@ buy/3-balsam-dr.html              a Buy post — one file per house
 rent/index.html                   the Lease homepage (town filter + tiles)
 rent/towers-at-longfellow.html    a building page (one photo, unit boxes inside)
 rent/longfellow-4-3011.html       a unit post — one file per unit
-rent/315-on-a.html                a Lease post
-rent/halstead-burlington.html     the current-home building page — its box
-                                   carries the Current Home details (monthly
-                                   costs) directly; there is no separate post
+                                   (single-unit buildings have NO pages of
+                                   their own — their details live in their box
+                                   on rent/index.html: 315 on A, Halstead)
 assets/spices.css                 ALL styling, shared by every page
 assets/spices.js                  ALL behaviour, shared by every page
 images/                           the photos, as real files
@@ -54,5 +53,8 @@ images/                           the photos, as real files
   every screen, sized by how many entries each side holds.
 - Multi-unit buildings get ONE picture on the homepages; the units
   live inside the building's page as boxes.
+- Routes (separate pages) exist ONLY for multi-unit buildings.
+  A single-unit building's details live in its box on the Lease
+  homepage, and its home-page picture links straight to that box.
 - Verdicts land as stamps (REJECTED / IN REVIEW / CURRENT HOME) only
   when Parthey gives them.
