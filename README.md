@@ -7,55 +7,50 @@ verdict it got.
 **Live:** https://beastmodepk.github.io/khanderiahomesearch/
 Domain (not yet connected): khanderiahomesearch.com
 
-## How the site is put together
+## How the site is put together (the hybrid)
 
-This repo IS the site — plain files, no build step. GitHub Pages serves it
-as-is on every push to `main`.
+The site is **one polished app page** — and the listings' words live in
+small separate files the app reads:
 
 ```
-index.html                        the Buy/Lease split screen (the front door)
-about.html                        the About page
-questions.html                    The Khanderia Questions
-blog/why-this-page-exists.html    Blog Post #1
-buy/index.html                    the Buy homepage (town filter + tiles)
-buy/3-balsam-dr.html              a Buy post — one file per house
-rent/index.html                   the Lease homepage (town filter + tiles)
-rent/towers-at-longfellow.html    a building page (one photo, unit boxes
-                                   inside — each unit's post opens AS A BOX
-                                   on this page, with Back + Home in the box)
-                                   (single-unit buildings have NO pages of
-                                   their own — their details live in their box
-                                   on rent/index.html: 315 on A, Halstead)
-assets/spices.css                 ALL styling, shared by every page
-assets/spices.js                  ALL behaviour, shared by every page
-images/                           the photos, as real files
+index.html      the app itself (design, behaviour, photos — don't edit
+                this by hand; it is generated from the Muse app)
+listings/       ONE small file per listing — THE WORDS LIVE HERE
+  3-balsam-dr.json
+  towers-at-longfellow.json   (the building + its five units)
+  315-on-a.json
+  halstead-burlington.json
+images/         the listing photos, as files
 ```
+
+When the page loads, the app fetches each `listings/*.json` and renders
+from it. If a file can't be loaded, the app falls back to a baked-in
+copy of the same words, so the page never renders empty.
 
 ## How to edit (for Shannon, or her Muse)
 
-- **Change words:** open the page's own `.html` file and edit the text
-  between the tags — what you see in the file is what's on the page.
-  Send the changed file (or a pull request) and it goes live on merge.
-- **Change a design thing everywhere:** edit `assets/spices.css` —
-  one file holds every "spice" (glass, stamps, tiles, colours).
-- **Add a property:** copy the closest existing post page, change its
-  text and photo, then add its tile to the side homepage
-  (`buy/index.html` or `rent/index.html`) and to the split screen
-  (`index.html`), and update the counts there.
-- **Tour posts all share one format:** the "Toured - <date>" heading,
-  then "Tour Notes:" with the recorded notes as bullets — verbatim,
-  never dressed up.
-- **Never invent a rent.** If a unit's rent wasn't noted on the tour,
-  its page says "Rent not noted".
+- **Change any words** — a price, a spec, a tour note, a cost: open
+  that listing's file in `listings/`, change the text between the
+  quotes, and send it back (or open a pull request). It goes live on
+  merge. Nothing else needs touching.
+- **Tour notes are verbatim.** The `notes` lists carry the recorded
+  tour notes word for word — never dressed up, and a rent is never
+  invented: if it wasn't noted, the file says "Rent not noted".
+- **Add a property:** add a new file in `listings/` in the same shape
+  and tell Alfred — the app's list of files lives in its code, so a
+  brand-new listing also needs one line added there (Alfred does it).
+- **Change the design:** that's the Muse app's job — ask Alfred.
+  `index.html` is regenerated from it, never hand-edited.
 
 ## House rules
 
 - The split screen never stacks — Buy and Lease sit side by side on
   every screen, sized by how many entries each side holds.
-- Multi-unit buildings get ONE picture on the homepages; the units
-  live inside the building's page as boxes.
-- Routes (separate pages) exist ONLY for multi-unit buildings.
-  A single-unit building's details live in its box on the Lease
-  homepage, and its home-page picture links straight to that box.
+- Multi-unit buildings get ONE picture; the units live inside the
+  building's panel as boxes, and a unit's post opens as a box with
+  **Back/Close** and **Home**.
+- Single-unit buildings have no separate post: everything lives in
+  their one place (315 on A in its box on the Lease homepage;
+  Halstead in its own building panel).
 - Verdicts land as stamps (REJECTED / IN REVIEW / CURRENT HOME) only
   when Parthey gives them.
