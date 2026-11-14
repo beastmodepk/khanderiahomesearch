@@ -1,0 +1,111 @@
+{
+  "id": "towers-at-longfellow",
+  "side": "lease",
+  "kind": "building",
+  "name": "Towers at Longfellow",
+  "town": "Boston",
+  "address": "3 Longfellow Place, Boston",
+  "photo": "images/longfellow.jpg",
+  "tourLabel": "Tour · Nov 7, 2026",
+  "units": [
+    {
+      "id": "4-3011",
+      "title": "Unit 4-3011 — The Leader",
+      "priceLine": "~$3,485 /month",
+      "specs": "924 sq ft · Floor 30",
+      "stamp": "IN REVIEW",
+      "boxFacts": [
+        "924 sq ft",
+        "Floor 30",
+        "Big walk-in closet",
+        "Bedroom 10/10"
+      ],
+      "notes": [
+        "Kitchen good (better than 1-1020)",
+        "Living room good",
+        "Bigger walk-in closet in hallway",
+        "Bedroom 10/10",
+        "View: brownstones, Dhruv's apartment, river, Zakim Bridge, Bunker Hill Monument",
+        "PK 8/10 (Dhruv's apartment right in front) · SD 10/10"
+      ]
+    },
+    {
+      "id": "4-1109",
+      "title": "Unit 4-1109",
+      "priceLine": "Rent not noted",
+      "specs": "1,024 sq ft · Floor 11",
+      "stamp": "IN REVIEW",
+      "boxFacts": [
+        "1,024 sq ft",
+        "Floor 11",
+        "Much larger balcony",
+        "Kitchen much larger"
+      ],
+      "notes": [
+        "Really big living/dining (almost too big, likely empty space)",
+        "Much larger balcony",
+        "Kitchen much larger",
+        "Lots of storage closets",
+        "Bedroom same size but bigger closet",
+        "View sucks — too low, another building blocks all views"
+      ]
+    },
+    {
+      "id": "1-315",
+      "title": "Unit 1-315",
+      "priceLine": "Rent not noted",
+      "specs": "1,010 sq ft · Corner unit, low floor",
+      "stamp": "IN REVIEW",
+      "boxFacts": [
+        "1,010 sq ft",
+        "Corner unit",
+        "Layout liked",
+        "Under renovation — see again"
+      ],
+      "notes": [
+        "Layout liked",
+        "Under renovation — need to see it again"
+      ]
+    },
+    {
+      "id": "1-1020",
+      "title": "Unit 1-1020",
+      "priceLine": "Rent not noted",
+      "specs": "924 sq ft · Floor 10",
+      "stamp": "IN REVIEW",
+      "boxFacts": [
+        "924 sq ft",
+        "Floor 10",
+        "Huge living room",
+        "Good balcony"
+      ],
+      "notes": [
+        "Facing the main entrance",
+        "Good balcony",
+        "Small kitchen",
+        "Huge living room",
+        "Big bedroom",
+        "View: State Street building, Dept. of Mental Health building, road, Building 4",
+        "PK + SD 5/10 — because it's so low"
+      ]
+    },
+    {
+      "id": "3-607",
+      "title": "Unit 3-607",
+      "priceLine": "Rent not noted",
+      "specs": "924 sq ft · Floor 6",
+      "stamp": "IN REVIEW",
+      "boxFacts": [
+        "924 sq ft",
+        "Floor 6",
+        "Same exact layout as 1-1020",
+        "Bad view"
+      ],
+      "notes": [
+        "Same exact layout as 1-1020",
+        "Bad view",
+        "Floor 6 no good"
+      ]
+    }
+  ]
+}

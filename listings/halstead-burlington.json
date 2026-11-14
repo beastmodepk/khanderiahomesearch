@@ -1,0 +1,23 @@
+{
+  "id": "halstead-burlington",
+  "side": "lease",
+  "kind": "building",
+  "name": "Halstead Burlington",
+  "town": "Burlington",
+  "sub": "Burlington, MA · Current lease",
+  "photo": "images/halstead.jpg",
+  "box": {
+    "title": "Current Home",
+    "stamp": "CURRENT HOME",
+    "facts": [
+      "In-unit washer/dryer"
+    ],
+    "costsHeading": "Monthly costs",
+    "costs": [
+      "Rent - $3100",
+      "Eversource - $120 approx",
+      "Internet - $65"
+    ],
+    "total": "Total - $3285 approx"
+  }
+}
