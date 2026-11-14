@@ -610,7 +610,7 @@
             <span class="panel-tag" id="panel-tag"></span>
             <span class="panel-title" id="panel-title"></span>
             <span class="spacer"></span>
-            <button class="backbtn" id="panel-back">← Back/Close</button>
+            <button class="backbtn" id="panel-back">✕ Close</button>
             <button class="backbtn" id="panel-home">Home</button>
           </div>
           <div id="panel-content"></div>
@@ -936,11 +936,11 @@
         tag.textContent = tagText;
         document.getElementById("panel-title").textContent = title;
         /* Every opened box carries exactly two controls at its top:
-           one Back/Close button — it goes back to where the box was
-           opened from (the building's other listings, for a unit post)
-           or simply closes the box when there is nowhere to go back
-           to — and one Home button, to the split home page. There is
-           no separate Back and Close: they were the same action. */
+           one Close button — a single word, one action: it returns
+           to where the box was opened from (the building's other
+           listings, for a unit post) or simply closes the box when
+           there is nowhere to go back to — and one Home button, to
+           the split home page. */
       }
 
       /* =============== Rendering: cards inside the panel =============== */
