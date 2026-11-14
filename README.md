@@ -1,33 +1,27 @@
-# Khanderia Home Search
+# Donnell Khanderia Home Search
 
-A house-hunting journal: rentals vs buying, one property at a time — investigated properly, answered honestly, stamped with a verdict.
+A house-hunting journal for Parthey & Shannon: homes to **buy** on the left, places to **lease** on the right — every entry investigated properly, answered honestly, and stamped with a verdict.
 
-The home page is the search board: **Rentals** and **Buying** tabs, a **town filter** in each, and a card for every property with its listing price, photo, specs and status. Every serious property also gets a full investigation page, and Parthey answers the same eight questions — [the Khanderia Questions](questions.html) — for each one before any verdict.
+Live: https://beastmodepk.github.io/khanderiahomesearch/
 
-The full plan — format, workflow, publishing steps and roadmap — lives in [PLAN.md](PLAN.md).
+## How the site works
 
-Live (once GitHub Pages is enabled): https://beastmodepk.github.io/khanderiahomesearch.com/
-Custom domain: **khanderiahomesearch.com** (CNAME file is in place; the domain itself still needs to be registered and its DNS pointed at GitHub Pages)
+The public page is a single self-contained `index.html`: a Buy/Lease split screen whose seam is sized by the entry counts, real listing photos as separate framed prints, Liquid Glass throughout, and details that open in place — no separate collection pages. The blog, the Khanderia Questions and the About page live inside the same page.
 
-## Investigations
+**Source of truth:** the page is designed and edited as a Muse page ("Khanderia Home Search — Shutter Example"). `index.html` in this repo is its export. To update the site: change the Muse page → export → replace `index.html` → commit (small, one functionality per commit) → push. The GitHub Actions workflow deploys to Pages on every push to `main`.
 
-- **House #1 — The Ranch That Wanted to Be a Colonial** (`posts/3-balsam-dr-chelmsford.html`)
-  3 Balsam Dr, Chelmsford, MA — $699,900. Could we add a second floor? Zoning said probably yes; the comps said no. **Rejected — value maths.**
+## What's on it now
 
-## Blog
+- **Buy — 1 home:** 3 Balsam Dr, Chelmsford, MA ($699,900) — "The Ranch That Wanted to Be a Colonial." Could we add a second floor? Zoning said probably yes; the comps said no. **Rejected — value maths.**
+- **Lease — 2 buildings, 6 units inside, all In Review:** Towers at Longfellow, Boston (5 units toured Nov 7, 2026 — 4-3011 leads) and 315 on A #1405, Fort Point.
 
-- **Post #1 — Why This Page Exists** (`blog/why-this-page-exists.html`) — how a Chelmsford ranch and one stubborn spreadsheet started this blog, and the rules every property after it will be judged by.
+## Publishing workflow for a new property
 
-## Adding content
+1. Parthey sends the listing in the Muse chat.
+2. Alfred investigates (feasibility, costs, comps) and drafts the entry.
+3. Parthey answers the eight Khanderia Questions in chat; the answers go on the entry.
+4. The entry posts as **In Review** until Parthey's verdict; then it gets its stamp and full write-up.
 
-- New blog post: copy `templates/blog-post-template.html` into `blog/`, fill it in, link it from `blog/index.html` and the home page.
-- New property: copy `templates/house-post-template.html` into `posts/`, save one photo to `images/`, add its card under the right tab in `index.html`.
+## Custom domain (pending)
 
-## Publishing
-
-Static HTML/CSS, no build step. GitHub Pages serves the `main` branch root.
-
-To finish the custom domain:
-1. Register `khanderiahomesearch.com` at any registrar.
-2. In the repo: Settings → Pages → set Source to `main` / root, and confirm the custom domain shows `khanderiahomesearch.com`.
-3. At the registrar, add the GitHub Pages A records (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) for the apex domain.
+`khanderiahomesearch.com` — available (checked Nov 13, 2026: Cloudflare Registrar $11.17/yr, Porkbun $11.81/yr), not yet registered. Once bought: add a `CNAME` file containing `khanderiahomesearch.com`, point the apex A records at GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153), and enforce HTTPS in Settings → Pages.
